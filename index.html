@@ -1,0 +1,270 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Oakbrook Neighborhood</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+				<style type="text/css" media="screen">
+						/*************************
+						Base Styles
+						*************************/
+
+						html {
+						  color: #222;
+						  font-size: 1em;
+						  line-height: 1.3;
+						  box-sizing: border-box;
+						}
+
+						*, *:before, *:after {
+						  box-sizing: inherit;
+						}
+
+						body {
+						  font-family: Helvetica, Helvetica Neue, Arial;
+						  font-size: 16px;
+						  line-height: 25px;
+						}
+
+						.wrapper {
+						  width: 90%;
+						  margin: 0 auto;
+						}
+
+						.header-container {
+							border-bottom: 20px solid #000066;
+						}
+
+						.footer-container,
+						.main aside {
+							border-top: 20px solid #000066
+						}
+
+						.header-container,
+						.footer-container,
+						.main aside {
+
+							background: #3366cc;
+						}
+
+						.title {
+							color: yellow; 
+						}
+						
+
+						nav ul {
+						  margin: 0;
+						  padding: 0;
+						  list-style-type: none;
+						}
+
+						nav a {
+						  display: block;
+						  margin-bottom: 10px;
+						  padding: 15px 0;
+						  text-align: center;
+						  text-decoration: none;
+						  font-weight: bold;
+						  color: white;
+							background: #000066
+						}
+
+						nav a:hover,
+						nav a:visited {
+						  color: white;
+						}
+
+						nav a:hover {
+						  text-decoration: underline;
+						}
+
+						.main {
+						  padding: 30px 0;
+						}
+
+						.main article h1 {
+						  font-size: 2em;
+						}
+
+						.main aside {
+						  color: white;
+						  padding: 0px 5% 10px;
+						}
+
+						.footer-container footer {
+						  color: white;
+						  padding: 20px 0;
+						}
+						#searchIcon, #avatar {
+								width: 50%;
+								border-radius: 50%;
+								margin: 0 25% 0 25%;
+						}
+
+						#gallery {
+						  margin: 0;
+						  padding: 0;
+						  list-style: none;
+						}
+						
+						/*************************
+						Media Queries
+						*************************/
+
+						@media only screen and (min-width: 480px) {
+
+						  nav a {
+							float: left;
+							width: 30%;
+							margin: 0 0 0 5%;
+							padding: 25px 1%;
+							margin-bottom: 0;
+						  }
+
+						  nav li:first-child a {
+							margin-left: 0;
+						  }
+
+						  nav li:last-child a {
+							margin-right: 0;
+						  }
+
+						}
+
+						@media only screen and (min-width: 768px),
+							   only screen and (min-width: 700px) and (orientation: landscape) {
+
+						  .title {
+							float: left;
+							font-size: 1.4em;
+						  }
+
+						  nav {
+							float: right;
+							width: 60%;
+						  }
+
+						  nav a {
+							padding: 15px 1%;
+						  }
+
+						  .main article {
+							float: left;
+							width: 57%;
+						  }
+
+						  .main aside {
+							float: right;
+							width: 38%;
+						  }
+						  
+						}
+
+						@media only screen and (min-width: 1140px) {
+
+						  .wrapper {
+							width: 1026px;
+							margin: 0 auto;
+						  }
+
+						  .title {
+							font-size: 2em;
+						  }
+
+						  nav a {
+							padding: 25px 1%;
+						  }
+						  
+						}
+
+
+						/*************************
+						Clearfix
+						*************************/
+
+						.clearfix:before,
+						.clearfix:after {
+						  content: " ";
+						  display: table;
+						}
+
+						.clearfix:after {
+						  clear: both;
+						}
+
+						.clearfix {
+						  *zoom: 1;
+						}
+
+				</style>
+    </head>
+    <body>
+
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <h1 class="title">Oakbrook Neighborhood</h1>
+                <nav>
+                    <ul>
+                        <li><a>General Information</a></li>
+                        <li><a>Highlight</a></li>
+                        <li><a>About the Author</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+
+                <article>
+                    <header>
+                        <h1>General Information</h1>
+                        <p>Oakbrook neighborhood is located in the eastern suburb of Louisville. It is quiet and beautiful. It is a great place for the families who are looking for quality life and education.</p>
+                    </header>
+                    <section>
+                        <h2>Schools</h2>
+                        <p>Many schools provide quality education near Oakbrook Neighborhood. Chancey Elementary School is in the walking distance to the neighborhood.</p>
+                    </section>
+                    <section>
+                        <h2>Shopping</h2>
+                        <p>Costco, Kroger, Target, Aldi, Walmart and a few shopping malls are nearby. </p>
+                    </section>
+                    <footer>
+                        <h2>Restaurants</h2>
+                        <p>A lot of restaurants serving delicious Italian, Mexican, Asian, European, and American food are close to the neighborhood. </p>
+                    </footer>
+                </article>
+
+                <aside>
+                    <h3>Highlight</h3>
+                    <p>Oakbrook neighborhood is quiet and beautiful. There are many good schools nearby. Shopping is very convenient. You will really enjoy the delicious food if you live in this neighborhood. </p>
+									<h3>About the author</h3>
+									<div id="profile">
+
+												<img src="{{avatarUrl}}" alt="Avatar" id="avatar">
+										
+												<p><span>Hong Gao</span></p>
+												<p><span>kygaohong@gmail.com</span></p>
+										
+												<ul>
+														<li><span>{{badges}}</span> Badges earned</li>
+														<li><span>{{javascriptPoints}}</span> JavaScript points</li>
+												</ul>
+										
+									</div>
+                </aside>
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="footer-container">
+            <footer class="wrapper">
+                <h3>Oakbrook: a great neighborhood</h3>
+            </footer>
+        </div>
+			<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+			<script src="app.js" type="text/javascript" charset="utf-8"></script>
+   
+    </body>
+</html>
