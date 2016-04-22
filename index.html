@@ -108,6 +108,9 @@
 						  list-style: none;
 						}
 						
+						#hidden {
+							display: none;
+						}
 						/*************************
 						Media Queries
 						*************************/
@@ -248,8 +251,11 @@
 												<p><span>kygaohong@gmail.com</span></p>
 										
 												<ul>
-														<li><span>{{badges}}</span> Badges earned</li>
-														<li><span>{{javascriptPoints}}</span> JavaScript points</li>
+														<button onclick="myFunction()">Show Bagdes and JavaScript points</button>
+														<div id="hidden">
+															<li><span>{{badges}}</span> Badges earned</li>
+															<li><span>{{javascriptPoints}}</span> JavaScript points</li>
+														</div>
 												</ul>
 										
 									</div>
@@ -264,7 +270,12 @@
             </footer>
         </div>
 			<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+			<script type="text/javascript">
+				function myFunction() {
+					document.getElementById("hidden").style.display = "block";
+				}
+			</script>
 			<script src="app.js" type="text/javascript" charset="utf-8"></script>
-   
+   		
     </body>
 </html>
